@@ -142,7 +142,7 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
             this.audioFile = file;
             this.recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
             this.recorder.setOutputFormat(MediaRecorder.OutputFormat.DEFAULT); // THREE_GPP);
-            this.recorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT); //AMR_NB);
+            this.recorder.setAudioEncoder(MediaRecorder.AudioEncoder.VORBIS); //CHANGED FROM AMR_NB TO OGG);
             this.recorder.setOutputFile(this.tempFile);
             try {
                 this.recorder.prepare();
